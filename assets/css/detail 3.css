@@ -1,0 +1,691 @@
+:root {
+    --header-height: 80px;
+    /* ======= Colors ======= */
+    --hue-color: 190;
+    /* Màu kiểu HSL(cho nó dễ làm) */
+    --first-color: hsl(var(--hue-color), 64%, 22%);
+    --first-color-second: hsl(var(--hue-color), 64%, 22%);
+    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+    --title-color: hsl(var(--hue-color), 64%, 18%);
+    --text-color: hsl(var(--hue-color), 24%, 35%);
+    --text-color-light: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 100%, 99%);
+    --white-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  
+    /* ================== Phông chữ và kiểu chữ  ==================== */
+    --body-font: "Open Sans", sans-serif;
+    --title-font: "Raleway", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.939rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  
+    /* ================== Độ dày của chữ  ==================== */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /* ================== Căn lề dưới  ==================== */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+  
+    /* ================== Mục lục  ==================== */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    /* ================== Hiệu ứng hover  ==================== */
+    --img-transition: 0.3s;
+    --img-hidden: hidden;
+    --img-scale: scale(1.1);
+  }
+  
+  @media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.75rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.813rem;
+    }
+  }
+  
+  /* ================== BASE  ==================== */
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* margin: var(--header-height) 0 0 0; */
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #636969;
+  }
+  
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button,
+  input {
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
+  button {
+    cursor: pointer;
+  }
+  input {
+    outline: none;
+  }
+  .main {
+    overflow-x: hidden;
+  }
+  /* ================== REUSEABLE CSS CLASSES  ==================== */
+  .section {
+    padding: 4, 5rem 0 2.5rem;
+    margin-top: 4rem;
+    display: block;
+  }
+  .section__title {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    color: #a0a6b2;
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-bottom: var(--mb-2);
+  }
+  
+  .container {
+    max-width: 1070px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  /* ================== HEADER ==================== */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: transparent;
+  }
+  /* Change background header */
+  .scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
+  }
+  .scroll-header .nav__link {
+  color: var(--title-color);
+}
+    /* ================== NAVBAR  ==================== */
+    .nav {
+        height: var(--header-height);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--title-font)
+      }
+      
+      
+      
+      .nav__logo{
+          display: flex;
+          color: var(--white-color);
+        }
+
+      
+      .nav__toggle {
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      
+      .nav__menu {
+        position: relative;
+      }
+      .nav__list {
+        display: flex;
+        flex-direction: row;
+        row-gap: 2.5rem;
+        font-size: 18px;
+        margin-left: 20px;
+      }
+      
+      .nav__link {
+        color:  var(--white-color);
+        font-weight: var(--font-semi-bold);
+        text-transform: uppercase;
+        text-decoration: none;
+        text-transform: initial;
+        font-weight: var(--font-semi-bold);
+        position: relative;
+        text-decoration: none;
+      }
+      
+      .nav__link:hover {
+        color: var(--text-color);
+      }
+
+      .nav__item{
+          margin: 2rem;
+      }
+
+      .nav__list{
+          margin-left: 2rem;
+      }
+
+
+/* ================== BUTTONS  ==================== */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button--flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.button--link {
+  background: none;
+  padding: 0;
+}
+.button--link:hover {
+  background: none;
+}
+
+/* ======================= HOME ======================== */
+.bali__img{
+width: 100%;
+height: 640px;
+position: absolute;
+top: 0;
+left: 0;
+object-fit: cover;
+object-position: 83%;
+}
+/* cái này là gọi đến thg section có id home */
+section#home{
+  background: url("../img/img\(detail\)/beach-in-kauai-hawaii-1200x627.jpg");
+  /* chọn đúng ảnh nhá mà để  file gì nhìn sợ thế  */
+  height: 700px;
+  background-size: cover;
+  /* em chỉnh lại height cho chuẩn với chỉnh cái chữ góc ảnh lại nhá , dung bg dễ làm các thứ hơn  */
+}
+.back__button{
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: transparent;
+  border: 3px solid #fff;
+  color: #fff;
+  text-align: center;
+  font: 24px Arial, sans-serif;
+  font-weight: var(--font-semi-bold);
+} 
+
+.circle{
+  padding-left: 9px;
+  padding-right: 25px;
+}
+
+.bali__title{
+  font-size: var(--h2-font-size);
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  margin-top: 6px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.bali__home-content{
+  position: absolute;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.bali__home-content{
+  bottom: 0;
+  left: 0;
+  margin-bottom: 80px;
+  margin-left: 30px;
+}
+.bali__span{
+  background-color: transparent; 
+}
+
+.bali__content{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 85px;
+  color: white;
+  margin-right: 70px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: var(--font-semi-bold);
+}
+.map__pin{
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+}
+
+.map__like{
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  padding-left: 60px;
+}
+.introduction{
+  color: #000;
+  width: fit-content;
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* ======================= INTRODUCTION ======================== */
+.text__content-one{
+  width: 850px;
+  max-height: 2000px;
+}
+
+.text__content{
+  line-height: 1.5;
+  font-family: 'Rubik', sans-serif;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+.tx{
+  margin-bottom: 10px;
+}
+
+.location__img{
+  width: 500px;
+  height: fit-content;
+}
+
+.comment__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 30px;
+}
+
+
+.comment{
+  display: flex;
+  flex-direction: row;
+  width: 171px;
+}
+
+.share{
+  display: flex;
+  flex-direction: row;
+
+}
+/* ======================= WEATHER ======================== */
+
+.weather{
+  font-family: 'Rubik', sans-serif; 
+  margin-left: 85px;
+  margin-top: 2.5rem;
+}
+
+.weather__container,
+.day,
+.night{
+  display: flex;
+  flex-direction: row;
+}
+.weather__container{
+  width: 500px;
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 30px;
+
+}
+.day,
+.night{
+  padding: 5px;
+}
+
+
+.night{
+  margin-left: 12rem;
+}
+.weather__text{
+  font-size: 44px;
+  color: #33425f;
+  font-weight: var(--font-semi-bold);
+}
+
+.weather__text{
+  margin-left: 10px;
+}
+
+
+
+/* ======================= PICTURES ======================== */
+
+.img__container{
+  max-width: 560px;
+  max-height: 560px;
+  float: right;
+  margin-left: 135px;
+}
+
+.img__content{
+  display: grid;
+  grid-template-columns: 166.6667px 166.6667px 166.6667px;
+  grid-template-rows: 166.6667px 166.6667px 166.6667px;
+}
+
+.img__items{
+  width: 166.6667px;
+  height: 166.6667px;
+}
+
+.img__items{
+  transition: var(--img-transition);
+}
+
+.img__items:hover {
+  transform: var(--img-scale);
+}
+.img__overflow{
+  overflow: var(--img-hidden);
+}
+
+
+/* ======================= VISITED BY FRIENDS ======================== */
+.friends__img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.visited{
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Rubik', sans-serif; 
+}
+
+.visited__text{
+  display: flex;
+  justify-content: space-around;
+}
+
+.visited__text-one{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: var(--font-semi-bold);
+  color: #a0a6b2;
+}
+
+.visited__text-two{
+  color: #bbbfc7;
+}
+.visited__img{
+  margin-right: 210px;
+  margin-top: 20px;
+}
+
+
+/* ======================= HOTELS ======================== */
+
+.hotel__container{
+  font-family: 'Rubik', sans-serif; 
+  margin-top: 4rem;
+  margin-left: 50px;
+  width: 928px;
+}
+
+.hotel__img{
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.hotel__minicontainer{
+  display: flex;
+  align-items: flex-end;
+  line-height: 1.1; 
+}
+
+.hotel__intro{
+  margin-left: 30px;
+}
+
+.intro__calendar{
+  margin-top: 20px;
+}
+
+
+/* ================== FOOTER  ==================== */
+.footer__container {
+  row-gap: 5rem;
+}
+
+.footer__content {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+}
+
+.footer__title,
+.footer__subtitle {
+  font-size: var(--h3-font-size);
+}
+
+.footer__title {
+  margin-bottom: var(--mb-0-5);
+}
+
+.footer__description {
+  margin-bottom: var(--mb-2);
+}
+
+.footer__social {
+  font-size: 1.23rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1-25);
+}
+
+.footer__subtitle {
+  margin-bottom: var(--mb-1);
+}
+
+.footer__item {
+  margin-bottom: var(--mb-0-75);
+}
+
+.footer__link {
+  color: var(--text-color);
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}
+
+.footer__rights {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  text-align: center;
+}
+
+.footer__copy,
+.footer__terms-link {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.footer__terms {
+  display: flex;
+  column-gap: 1.5rem;
+  justify-content: center;
+}
+
+.footer__terms-link:hover {
+  color: var(--text-color);
+} 
+.footer__container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.footer{
+  margin-top: 222px;
+}
+
+.footer__need{
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--h2-font-size);
+  justify-self: center;
+}
+
+.footer__need-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ================== VIDEO  ==================== */
+.video__container {
+  padding-bottom: 1rem;
+}
+
+.video__content {
+  position: relative;
+}
+
+.video__button {
+  position: absolute;
+  right: 31rem;
+  bottom: -1rem;
+  padding: 1rem 1.5rem;
+}
+
+.video__button-icon {
+  font-size: 1.2rem;
+}
+
+.video__description{
+  font-family: 'Rubik', sans-serif;
+  padding-bottom: 20px;
+  margin-left: 70px;
+}
+
+#video-file{
+  width: 500px;
+  height: auto;
+  margin-left: 90px;
+}
+/* ================== SCROLL BAR  ==================== */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
+
+/* ==================   BUTTON  ==================== */
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 2rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button--flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.button--link {
+  background: none;
+  padding: 0;
+}
+.button--link:hover {
+  background: none;
+}
