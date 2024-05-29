@@ -168,7 +168,7 @@ input {
 
 .nav__logo {
   font-weight: var(--font-semi-bold);
-  font-size: 25px
+  font-size: 25px;
 }
 
 .nav__toggle {
@@ -709,11 +709,12 @@ input {
   right: 1rem;
   bottom: -20%;
   background-color: var(--first-color);
-  padding: 0.5rem;
+  padding: 17px;
   display: flex;
   opacity: 0.9;
   z-index: var(--z-tooltip);
   transition: 0.4s;
+  border-radius: 7px;
 }
 
 .scrollup__icon {
