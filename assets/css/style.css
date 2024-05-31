@@ -5,17 +5,17 @@
   /* ======= Colors ======= */
   --hue-color: 190;
   /* Màu kiểu HSL(cho nó dễ làm) */
-  --first-color: hsl(var(--hue-color), 64%, 22%);
-  --first-color-second: hsl(var(--hue-color), 64%, 22%);
-  --first-color-alt: hsl(var(--hue-color), 64%, 15%);
-  --title-color: hsl(var(--hue-color), 64%, 18%);
-  --text-color: hsl(var(--hue-color), 24%, 35%);
-  --text-color-light: hsl(var(--hue-color), 8%, 60%);
-  --input-color: hsl(var(--hue-color), 24%, 97%);
-  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --first-color: #14505c;
+  --first-color-second: #14505c;
+  --first-color-alt: #0e373f;
+  --title-color: #11414b;
+  --text-color: #44686f;
+  --text-color-light: #919ea1;
+  --input-color: #f6f9f9;
+  --body-color: #fafeff;
   --white-color: #fff;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  --scroll-bar-color: #e2e8e9;
+  --scroll-thumb-color: #b8c4c7;
 
   /* ================== Phông chữ và kiểu chữ  ==================== */
   --body-font: "Open Sans", sans-serif;
