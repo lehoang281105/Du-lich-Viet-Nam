@@ -3,8 +3,6 @@
 :root {
   --header-height: 3rem;
   /* ======= Colors ======= */
-  --hue-color: 190;
-  /* Màu kiểu HSL(cho nó dễ làm) */
   --first-color: #14505c;
   --first-color-second: #14505c;
   --first-color-alt: #0e373f;
@@ -188,7 +186,7 @@ input {
     right: -100%;
     width: 70%;
     height: 100%;
-    box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
+    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15 /* Độ trong suốt */);
     padding: 3rem;
     transition: 0.5s;
   }
@@ -225,7 +223,7 @@ input {
 /* Change background header */
 .scroll-header {
   background-color: var(--body-color);
-  box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
 }
 
 .scroll-header .nav__logo,
@@ -745,8 +743,8 @@ input {
   background-color: var(--text-color-light);
 }
 
-/* For small devices */
-@media screen and (max-width: 340px) {
+/* Nhỏ */
+@media screen and (max-width: 450px) {
   .place__container {
     grid-template-columns: max-content;
     justify-content: center;
@@ -768,9 +766,16 @@ input {
   .video__container {
     padding: 0;
   }
+  .nav__image {
+    width: 55px;
+    height: 40px;
+  }
+  .home__info-overlay {
+    display: none;
+  }
 }
 
-/* For medium devices */
+/* Trung bình */
 @media screen and (min-width: 568px) {
   .video__container {
     display: grid;
@@ -783,6 +788,11 @@ input {
   .subscribe__form {
     width: 470px;
     margin: 0 auto;
+  }
+  .nav__image {
+    width: 400px;
+    height: 50px;
+    margin-top: 12px;
   }
 }
 
@@ -902,7 +912,7 @@ input {
   }
 }
 
-/* For large devices */
+/* Cho thiết bị màn hình to */
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
@@ -977,7 +987,7 @@ input {
   }
 }
 
-/* For tall screens on mobiles on desktop*/
+/* Cho 21:9*/
 @media screen and (min-height: 721px) {
   body {
     margin: 0;

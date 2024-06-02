@@ -133,7 +133,7 @@ sr.reveal(
 );
 
 sr.reveal(
-  `.about__data, 
+  `.about__data,
            .video__description,
            .subscribe__description`,
   {
@@ -142,7 +142,7 @@ sr.reveal(
 );
 
 sr.reveal(
-  `.about__img-overlay, 
+  `.about__img-overlay,
            .video__content,
            .subscribe__form`,
   {
@@ -151,4 +151,10 @@ sr.reveal(
   }
 );
 
-
+/* ============ SCROLL TO HEADER =========== */
+document
+  .getElementById("scroll-up")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
+    document.getElementById("header").scrollIntoView({ behavior: "smooth" });
+  });
