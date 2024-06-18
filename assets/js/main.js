@@ -152,9 +152,6 @@ sr.reveal(
 );
 
 /* ============ SCROLL TO HEADER =========== */
-document
-  .getElementById("scroll-up")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-    document.getElementById("header").scrollIntoView({ behavior: "smooth" });
-  });
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}

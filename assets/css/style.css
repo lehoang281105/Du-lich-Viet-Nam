@@ -120,7 +120,7 @@ input {
 }
 /* ================== REUSEABLE CSS CLASSES  ==================== */
 .section {
-  padding: 4, 5rem 0 2.5rem;
+  padding: 4.5rem 0 2.5rem;
   margin-top: 4rem;
 }
 .section__title {
@@ -471,6 +471,7 @@ input {
   position: absolute;
   top: 2rem;
   right: 0;
+  z-index: 1;
 }
 
 .experience__img-one,
@@ -616,22 +617,6 @@ input {
 
 .subcribe__input::placeholder {
   color: var(--text-color);
-}
-/* ================== SPONSORS  ==================== */
-.sponsor__container {
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  justify-items: center;
-  row-gap: 3.5rem;
-}
-
-.sponsor__img {
-  width: 90px;
-  filter: invert(0.7);
-  transition: var(--img-transition);
-}
-
-.sponsor__content:hover .sponsor__img {
-  filter: invert(0.5);
 }
 
 /* ================== FOOTER  ==================== */

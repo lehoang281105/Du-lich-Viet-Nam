@@ -15,7 +15,6 @@ window.addEventListener("scroll", scrollHeader);
 
 console.log(document.getElementById("imgback").src);
 
-
 /* ================== VIDEO  ==================== */
 const videoFile = document.getElementById("video-file"),
   videoButton = document.getElementById("video-button"),
@@ -47,6 +46,53 @@ function finalVideo() {
 }
 videoFile.addEventListener("ended", finalVideo);
 
+/* ================== SCROLL SECTIONS ACTIVE LINK  ==================== */
+document.addEventListener("DOMContentLoaded", function () {
+  // Lấy tất cả các liên kết điều hướng
+  const navLinks = document.querySelectorAll(".nav__link");
 
+  // Hàm để xóa lớp active-link từ tất cả các liên kết
+  function removeActiveClass() {
+    navLinks.forEach((link) => {
+      link.classList.remove("active-link");
+    });
+  }
 
+  // Hàm để thêm lớp active-link vào liên kết hiện tại
+  function addActiveClass(link) {
+    removeActiveClass();
+    link.classList.add("active-link");
+  }
 
+  // Lắng nghe sự kiện click trên các liên kết điều hướng
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      addActiveClass(this);
+    });
+  });
+
+  // Hàm để kiểm tra vị trí cuộn và cập nhật liên kết active
+  function setActiveLinkOnScroll() {
+    let current = "";
+
+    // Vị trí hiện tại của các phần tử trên trang
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 150; // Điều chỉnh khoảng cách cho phù hợp
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    // Cập nhật liên kết active dựa trên vị trí cuộn
+    navLinks.forEach((link) => {
+      link.classList.remove("active-link");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active-link");
+      }
+    });
+  }
+
+  // Lắng nghe sự kiện scroll trên window
+  window.addEventListener("scroll", setActiveLinkOnScroll);
+});

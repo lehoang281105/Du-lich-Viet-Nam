@@ -1,225 +1,236 @@
 :root {
-    --header-height: 80px;
-    /* ======= Colors ======= */
-    --hue-color: 190;
-    /* Màu kiểu HSL(cho nó dễ làm) */
-    --first-color: hsl(var(--hue-color), 64%, 22%);
-    --first-color-second: hsl(var(--hue-color), 64%, 22%);
-    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
-    --title-color: hsl(var(--hue-color), 64%, 18%);
-    --text-color: hsl(var(--hue-color), 24%, 35%);
-    --text-color-light: hsl(var(--hue-color), 8%, 60%);
-    --input-color: hsl(var(--hue-color), 24%, 97%);
-    --body-color: hsl(var(--hue-color), 100%, 99%);
-    --white-color: #fff;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
-  
-    /* ================== Phông chữ và kiểu chữ  ==================== */
-    --body-font: "Open Sans", sans-serif;
-    --title-font: "Raleway", sans-serif;
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.939rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
-  
-    /* ================== Độ dày của chữ  ==================== */
-    --font-medium: 500;
-    --font-semi-bold: 600;
-  
-    /* ================== Căn lề dưới  ==================== */
-    --mb-0-25: 0.25rem;
-    --mb-0-5: 0.5rem;
-    --mb-0-75: 0.75rem;
-    --mb-1: 1rem;
-    --mb-1-25: 1.25rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-  
-    /* ================== Mục lục  ==================== */
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    /* ================== Hiệu ứng hover  ==================== */
-    --img-transition: 0.3s;
-    --img-hidden: hidden;
-    --img-scale: scale(1.1);
-  }
-  
-  @media screen and (min-width: 968px) {
-    :root {
-      --biggest-font-size: 4rem;
-      --h1-font-size: 2.25rem;
-      --h2-font-size: 1.75rem;
-      --h3-font-size: 1.25rem;
-      --normal-font-size: 1rem;
-      --small-font-size: 0.875rem;
-      --smaller-font-size: 0.813rem;
-    }
-  }
-  
-  /* ================== BASE  ==================== */
-  * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    /* margin: var(--header-height) 0 0 0; */
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-color);
-  }
-  
-  h1,
-  h2,
-  h3 {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-    font-family: var(--title-font);
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #636969;
-  }
-  
-  img,
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  button,
-  input {
-    border: none;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-  }
-  button {
-    cursor: pointer;
-  }
-  input {
-    outline: none;
-  }
-  .main {
-    overflow-x: hidden;
-  }
-  /* ================== REUSEABLE CSS CLASSES  ==================== */
-  .section {
-    padding: 4, 5rem 0 2.5rem;
-    margin-top: 4rem;
-    display: block;
-  }
-  .section__title {
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    color: #a0a6b2;
-    font-weight: var(--font-semi-bold);
-    text-transform: uppercase;
-    margin-left: 50px;
-    margin-bottom: var(--mb-2);
-  }
-  
-  .container {
-    max-width: 1070px;
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  }
-  
-  .grid {
-    display: grid;
-    gap: 1.5rem;
-  }
+  --header-height: 3rem;
+  /* ======= Colors ======= */
+  --first-color: #14505c;
+  --first-color-second: #14505c;
+  --first-color-alt: #0e373f;
+  --title-color: #11414b;
+  --text-color: #44686f;
+  --text-color-light: #919ea1;
+  --input-color: #f6f9f9;
+  --body-color: #fafeff;
+  --white-color: #fff;
+  --scroll-bar-color: #e2e8e9;
+  --scroll-thumb-color: #b8c4c7;
 
-  /* ================== HEADER ==================== */
+  /* ================== Phông chữ và kiểu chữ  ==================== */
+  --body-font: "Open Sans", sans-serif;
+  --title-font: "Quicksand", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.939rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* ================== Độ dày của chữ  ==================== */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* ================== Căn lề dưới  ==================== */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /* ================== Mục lục  ==================== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  /* ================== Hiệu ứng hover  ==================== */
+  --img-transition: 0.3s;
+  --img-hidden: hidden;
+  --img-scale: scale(1.1);
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* ================== BASE  ==================== */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--title-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #636969;
+}
+strong {
+  font-family: var(--title-font);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+button {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+.main {
+  overflow-x: hidden;
+}
+/* ================== REUSEABLE CSS CLASSES  ==================== */
+.section {
+  padding: 4, 5rem 0 2.5rem;
+  margin-top: 4rem;
+  display: block;
+}
+.section__title {
+  font-size: 18px;
+  font-family: var(--title-font);
+  color: #a0a6b2;
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-bottom: var(--mb-2);
+}
+
+.container {
+  max-width: 1070px;
+  margin-left: var(--mb-1);
+  margin-right: var(--mb-1);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ================== HEADER ==================== */
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-fixed);
-    background-color: transparent;
-  }
-  /* Change background header */
-  .scroll-header {
-    background-color: var(--body-color);
-    box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, 0.15);
-  }
-  .scroll-header .nav__link {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: transparent;
+}
+/* Change background header */
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+.scroll-header .nav__link {
   color: var(--title-color);
 }
-    /* ================== NAVBAR  ==================== */
-    .nav {
-        height: var(--header-height);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-family: var(--title-font)
-      }
-      
-      
-      
-      .nav__logo{
-          display: flex;
-          color: var(--white-color);
-        }
+/* ================== NAVBAR  ==================== */
+.nav {
+  height: var(--header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--title-font);
+}
 
-      
-      .nav__toggle {
-        font-size: 1.2rem;
-        cursor: pointer;
-      }
-      
-      .nav__menu {
-        position: relative;
-      }
-      .nav__list {
-        display: flex;
-        flex-direction: row;
-        row-gap: 2.5rem;
-        font-size: 18px;
-        margin-left: 20px;
-      }
-      
-      .nav__link {
-        color:  var(--white-color);
-        font-weight: var(--font-semi-bold);
-        text-transform: uppercase;
-        text-decoration: none;
-        text-transform: initial;
-        font-weight: var(--font-semi-bold);
-        position: relative;
-        text-decoration: none;
-      }
-      
-      .nav__link:hover {
-        color: var(--text-color);
-      }
+.nav__logo {
+  display: flex;
+  color: var(--white-color);
+}
 
-      .nav__item{
-          margin: 2rem;
-      }
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 
-      .nav__list{
-          margin-left: 2rem;
-      }
+.nav__menu {
+  position: relative;
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  row-gap: 2.5rem;
+  font-size: 18px;
+  margin-left: 20px;
+}
 
+.nav__link {
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-transform: initial;
+  font-weight: var(--font-semi-bold);
+  position: relative;
+  text-decoration: none;
+}
 
+.nav__link:hover {
+  color: var(--text-color);
+}
+
+.nav__item {
+  margin: 2rem;
+}
+
+.nav__list {
+  margin-left: 2rem;
+}
+/* Actice Link */
+.active-link {
+  position: relative;
+  color: var(--title-color);
+}
+
+.active-link::before {
+  content: "";
+  position: absolute;
+  background-color: var(--title-color);
+  width: 100%;
+  height: 2px;
+  bottom: -0.75rem;
+  left: 0;
+}
 /* ================== BUTTONS  ==================== */
 .button {
   display: inline-block;
@@ -248,25 +259,31 @@
   background: none;
 }
 
-/* ======================= HOME ======================== */
-.bali__img{
-width: 100%;
-height: 640px;
-position: absolute;
-top: 0;
-left: 0;
-object-fit: cover;
-object-position: 83%;
+.place__button:first-child {
+  margin-left: 50px;
 }
-/* cái này là gọi đến thg section có id home */
-section#home{
-  background: url("../img/img\(detail\)/bali__img.jpg");
-  /* chọn đúng ảnh nhá mà để  file gì nhìn sợ thế  */
+
+.place__button {
+  margin-bottom: 55px;
+}
+
+/* ======================= HOME ======================== */
+.bali__img {
+  width: 100%;
+  height: 640px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 83%;
+}
+
+section#home {
+  background: url("/assets/img/Bien-Ha-Long-1-1.jpg");
   height: 700px;
   background-size: cover;
-  /* em chỉnh lại height cho chuẩn với chỉnh cái chữ góc ảnh lại nhá , dung bg dễ làm các thứ hơn  */
 }
-.back__button{
+.back__button {
   margin-left: 25px;
   margin-top: 15px;
 }
@@ -275,46 +292,47 @@ section#home{
   width: 50px;
   height: 50px;
   padding: 10px;
+  margin-right: 8px;
   background: transparent;
   border: 3px solid #fff;
   color: #fff;
   text-align: center;
   font: 24px Arial, sans-serif;
   font-weight: var(--font-semi-bold);
-} 
+}
 
-.circle{
+.circle {
   padding-left: 9px;
   padding-right: 25px;
 }
 
-.bali__title{
+.bali__title {
   font-size: var(--h2-font-size);
   color: var(--white-color);
   font-weight: var(--font-medium);
   margin-top: 6px;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--title-font);
 }
 
-.bali__home-content{
+.bali__home-content {
   position: absolute;
-  width: 250px;
+  width: fit-content;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
-.bali__home-content{
+.bali__home-content {
   bottom: 0;
   left: 0;
   margin-bottom: 80px;
   margin-left: 30px;
 }
-.bali__span{
-  background-color: transparent; 
+.bali__span {
+  background-color: transparent;
 }
 
-.bali__content{
+.bali__content {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -323,207 +341,217 @@ section#home{
   margin-bottom: 85px;
   color: white;
   margin-right: 70px;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--body-font);
   font-weight: var(--font-semi-bold);
 }
-.map__pin{
+.map__pin {
   display: flex;
   flex-direction: row;
   font-size: 22px;
 }
 
-.map__like{
+.map__like {
   display: flex;
   flex-direction: row;
   font-size: 22px;
   padding-left: 60px;
 }
-.introduction{
+.introduction {
   color: #000;
   width: fit-content;
   display: grid;
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-
 /* ======================= INTRODUCTION ======================== */
-.text__content-one{
+.text__content-one {
   width: 850px;
   max-height: 2000px;
 }
 
-.text__content{
+.text__content {
   line-height: 1.5;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--body-font);
   margin-left: 50px;
   margin-top: 40px;
 }
-.tx{
+.tx {
   margin-bottom: 10px;
 }
 
-.location__img{
+.location__img {
   width: 500px;
   height: fit-content;
 }
 
-.comment__container{
+.comment__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 2rem;
   border-bottom: 2px solid lightgray;
   padding-bottom: 30px;
 }
 
-
-.comment{
+.comment {
   display: flex;
   flex-direction: row;
-  width: 161px;
+  width: 190px;
 }
 
-.share{
+.share {
   display: flex;
   flex-direction: row;
-
 }
 /* ======================= WEATHER ======================== */
 
-.weather{
-  font-family: 'Rubik', sans-serif; 
+.weather {
+  font-family: var(--body-font);
   margin-left: 85px;
   margin-top: 2.5rem;
 }
 
 .weather__container,
 .day,
-.night{
+.night {
   display: flex;
   flex-direction: row;
 }
-.weather__container{
+.weather__container {
   width: 500px;
   border-bottom: 2px solid lightgray;
   padding-bottom: 30px;
-
 }
 .day,
-.night{
+.night {
   padding: 5px;
 }
 
-
-.night{
+.night {
   margin-left: 12rem;
 }
-.weather__text{
-  font-size: 44px;
+.weather__text {
+  font-size: var(--h1-font-size);
   color: #33425f;
   font-weight: var(--font-semi-bold);
 }
 
-.weather__text{
+.weather__text {
   margin-left: 10px;
 }
 
-
-
 /* ======================= PICTURES ======================== */
 
-.img__container{
+.img__container {
   max-width: 560px;
   max-height: 560px;
   float: right;
   margin-left: 135px;
 }
 
-.img__content{
+.img__content {
   display: grid;
   grid-template-columns: 166.6667px 166.6667px 166.6667px;
   grid-template-rows: 166.6667px 166.6667px 166.6667px;
 }
 
-.img__items{
+.img__items {
   width: 166.6667px;
   height: 166.6667px;
 }
 
-.img__items{
+.img__items {
   transition: var(--img-transition);
 }
 
 .img__items:hover {
   transform: var(--img-scale);
 }
-.img__overflow{
+.img__overflow {
   overflow: var(--img-hidden);
 }
 
-
 /* ======================= VISITED BY FRIENDS ======================== */
-.friends__img{
+.friends__img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.visited{
+.visited {
   text-align: center;
   margin-top: 40px;
-  font-family: 'Rubik', sans-serif; 
+  font-family: var(--title-font);
 }
 
-.visited__text{
+.visited__text {
   display: flex;
   justify-content: space-around;
 }
 
-.visited__text-one{
+.visited__text-one {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: var(--font-semi-bold);
   color: #a0a6b2;
 }
 
-.visited__text-two{
+.visited__text-two {
   color: #bbbfc7;
 }
-.visited__img{
+.visited__img {
   margin-right: 210px;
   margin-top: 20px;
 }
 
-
 /* ======================= HOTELS ======================== */
-
-.hotel__container{
-  font-family: 'Rubik', sans-serif; 
-  margin-top: 4rem;
-  margin-left: 50px;
-  width: 928px;
+.hotel {
+  display: flex;
+  flex-direction: row;
 }
 
-.hotel__img{
-  width: 150px;
-  height: 150px;
+.hotel__pr {
+  margin-left: 50px;
   margin-top: 30px;
 }
 
-.hotel__minicontainer{
-  display: flex;
-  align-items: flex-end;
+.hotel__container {
+  font-family: var(--body-font);
+  margin-left: 50px;
+  margin-top: 1rem;
+  width: 928px;
 }
 
-.hotel__intro{
+.hotel__img {
+  width: 150px;
+  height: 150px;
+  margin-top: 30px;
+  background-size: cover;
+}
+
+.hotel__minicontainer {
+  display: flex;
+  align-items: flex-end;
+  line-height: 18px;
+  margin-top: 30px;
+}
+
+.hotel__intro {
   margin-left: 30px;
 }
 
-.intro__calendar{
+.intro__calendar {
   margin-top: 20px;
 }
-
+.paying p {
+  margin-left: 120px;
+}
+.paying__qr {
+  zoom: 0.7;
+  margin-left: 100px;
+  margin-top: 100px;
+}
 
 /* ================== FOOTER  ==================== */
 .footer__container {
@@ -533,6 +561,7 @@ section#home{
 .footer__content {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;
+  margin-left: 100px;
 }
 
 .footer__title,
@@ -572,9 +601,11 @@ section#home{
 
 .footer__rights {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   row-gap: 1.5rem;
   text-align: center;
+  margin-bottom: var(--mb-0-75);
 }
 
 .footer__copy,
@@ -591,28 +622,26 @@ section#home{
 
 .footer__terms-link:hover {
   color: var(--text-color);
-} 
-.footer__container{
+}
+.footer__container {
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
 }
 
-.footer{
+.footer {
   margin-top: 222px;
 }
 
-.footer__need{
-  font-family: 'Rubik', sans-serif;
+.footer__need {
   font-size: var(--h2-font-size);
   justify-self: center;
 }
 
-.footer__need-container{
+.footer__need-container {
   display: flex;
   justify-content: center;
 }
-
 
 /* ================== VIDEO  ==================== */
 .video__container {
@@ -634,13 +663,13 @@ section#home{
   font-size: 1.2rem;
 }
 
-.video__description{
-  font-family: 'Rubik', sans-serif;
+.video__description {
+  font-family: "Rubik", sans-serif;
   padding-bottom: 20px;
   margin-left: 70px;
 }
 
-#video-file{
+#video-file {
   width: 500px;
   height: auto;
   margin-left: 90px;
@@ -658,7 +687,6 @@ section#home{
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
 }
-
 
 /* ==================   BUTTON  ==================== */
 
@@ -688,4 +716,3 @@ section#home{
 .button--link:hover {
   background: none;
 }
-
