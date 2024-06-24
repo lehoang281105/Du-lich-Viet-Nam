@@ -96,3 +96,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Lắng nghe sự kiện scroll trên window
   window.addEventListener("scroll", setActiveLinkOnScroll);
 });
+
+function goBackToPlaceSection() {
+  // Kiểm tra nếu có trang trước trong lịch sử
+  if (document.referrer) {
+    // Lưu URL của trang trước
+    var previousURL = document.referrer;
+    // Thêm phần anchor cho section cụ thể
+    var newURL = previousURL.split("#")[0] + "#place";
+    // Điều hướng đến URL mới
+    window.location.href = newURL;
+  } else {
+    // Nếu không có trang trước trong lịch sử, điều hướng đến trang index.html
+    window.location.href = "index.html#place";
+  }
+}
