@@ -2,9 +2,9 @@ let payingHotel = [
   {
     hotelID: "Hotel001",
     hotelImg: "/assets/img/img(detail)/halonghotel/halong1.jpg",
-    hotelName: "Soleil Hạ Long",
+    hotelName: "Soleil Kỳ Co",
     hotelIntro:
-      "Khách sạn SOLEIL Hạ Long sở hữu vị trí trung tâm đắc địa nằm ở vị trí thuận tiện, đối diện với công viên giải trí SunWorld và đặc biệt được yêu thích bởi tầm nhìn toàn cảnh ra vịnh Hạ Long, nơi có những điểm thăm quan kì thú cùng những chiếc du thuyền tuyệt đẹp.",
+      "Khách sạn SOLEIL Kỳ Co sở hữu vị trí trung tâm đắc địa nằm ở vị trí thuận tiện, đối diện với công viên giải trí SunWorld và đặc biệt được yêu thích bởi tầm nhìn toàn cảnh ra vịnh Kỳ Co, nơi có những điểm thăm quan kì thú cùng những chiếc du thuyền tuyệt đẹp.",
     hotelPriceTag: "All year: 132$ per night/Family",
     hotelPrice: 2000,
   },
@@ -15,7 +15,7 @@ let payingHotel = [
       "http://127.0.0.1:5500/assets/img/img(detail)/halonghotel/halong2.jpg",
     hotelName: "A La Carte",
     hotelIntro:
-      "Cảm hứng từ không gian mênh mông của Vịnh Hạ Long, các kiến trúc sư đã mang tới dự án một thiết kế đậm chất nghỉ dưỡng với không gian rộng rãi, khoáng đạt, tận dụng nguồn sáng và gió tự nhiên chiếu sáng từng góc trong căn phòng.",
+      "Cảm hứng từ không gian mênh mông của Vịnh Kỳ Co, các kiến trúc sư đã mang tới dự án một thiết kế đậm chất nghỉ dưỡng với không gian rộng rãi, khoáng đạt, tận dụng nguồn sáng và gió tự nhiên chiếu sáng từng góc trong căn phòng.",
     hotelPriceTag: "All year: 65$ per night/2P",
     hotelPrice: 3000,
   },
@@ -24,9 +24,9 @@ let payingHotel = [
     hotelID: "Hotel003",
     hotelImg:
       "http://127.0.0.1:5500/assets/img/img(detail)/halonghotel/halong3.jpg",
-    hotelName: "FLC Hạ Long",
+    hotelName: "FLC Kỳ Co",
     hotelIntro:
-      "Nằm ở trung tâm khu nghỉ dưỡng FLC Hạ Long Golf Club & Luxury Resort cao cấp, khách sạn FLC Grand Hạ Long được thiết kế theo hình thức căn hộ với diện tích rộng và trang bị đầy đủ tiện nghi, mang đến cho du khách những giờ phút thư giãn trọn vẹn như chính tại căn nhà của bạn.",
+      "Nằm ở trung tâm khu nghỉ dưỡng FLC Kỳ Co Golf Club & Luxury Resort cao cấp, khách sạn FLC Grand Kỳ Co được thiết kế theo hình thức căn hộ với diện tích rộng và trang bị đầy đủ tiện nghi, mang đến cho du khách những giờ phút thư giãn trọn vẹn như chính tại căn nhà của bạn.",
     hotelPriceTag: "All year: 60$ per night/2P",
     hotelPrice: 4000,
   },

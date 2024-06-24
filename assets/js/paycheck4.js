@@ -1,33 +1,31 @@
 let payingHotel = [
   {
-    hotelID: "Hotel001",
-    hotelImg: "/assets/img/img(detail)/halonghotel/halong1.jpg",
-    hotelName: "Soleil Hạ Long",
+    hotelID: "Hotel041",
+    hotelImg: "/assets/img/img(detail)/phuquochotel/phuquoc1.jpg",
+    hotelName: "Vinpearl Wonderworld",
     hotelIntro:
-      "Khách sạn SOLEIL Hạ Long sở hữu vị trí trung tâm đắc địa nằm ở vị trí thuận tiện, đối diện với công viên giải trí SunWorld và đặc biệt được yêu thích bởi tầm nhìn toàn cảnh ra vịnh Hạ Long, nơi có những điểm thăm quan kì thú cùng những chiếc du thuyền tuyệt đẹp.",
-    hotelPriceTag: "All year: 132$ per night/Family",
+      "Khách sạn tọa lạc tại Bãi Dài, Phú Quốc với vẻ đẹp hoang sơ đẳng cấp thế giới khiến các vị khách khó lòng cưỡng lại. Hàng dừa đổ bóng trên bãi cỏ bao quanh từng căn biệt thự trắng theo phong cách cột trụ với hồ bơi riêng và lối đi dẫn đến hồ nước yên ả.",
+    hotelPriceTag: "All year: 255$ per night/Family",
     hotelPrice: 2000,
   },
 
   {
-    hotelID: "Hotel002",
-    hotelImg:
-      "http://127.0.0.1:5500/assets/img/img(detail)/halonghotel/halong2.jpg",
-    hotelName: "A La Carte",
+    hotelID: "Hotel042",
+    hotelImg: "/assets/img/img(detail)/phuquochotel/phuquoc2.jpg",
+    hotelName: "Melia Vinpearl",
     hotelIntro:
-      "Cảm hứng từ không gian mênh mông của Vịnh Hạ Long, các kiến trúc sư đã mang tới dự án một thiết kế đậm chất nghỉ dưỡng với không gian rộng rãi, khoáng đạt, tận dụng nguồn sáng và gió tự nhiên chiếu sáng từng góc trong căn phòng.",
-    hotelPriceTag: "All year: 65$ per night/2P",
+      "Được ôm ấp bởi một trong những bờ biển đẹp nhất thế giới - Bãi Dài, Meliá Vinpearl Phú Quốc mời gọi du khách đắm chìm trong bản hòa ca thiên nhiên và những mặt hồ gợn sóng. Những rặng dừa tỏa bóng mát dọc các bãi cỏ rộng bao quanh từng khu biệt thự và các lối đi dẫn ra bãi cát trắng mịn.",
+    hotelPriceTag: "All year: 200$ per night/2P",
     hotelPrice: 3000,
   },
 
   {
-    hotelID: "Hotel003",
-    hotelImg:
-      "http://127.0.0.1:5500/assets/img/img(detail)/halonghotel/halong3.jpg",
-    hotelName: "FLC Hạ Long",
+    hotelID: "Hotel043",
+    hotelImg: "/assets/img/img(detail)/phuquochotel/phuquoc3.jpg",
+    hotelName: "Crowne Plaza",
     hotelIntro:
-      "Nằm ở trung tâm khu nghỉ dưỡng FLC Hạ Long Golf Club & Luxury Resort cao cấp, khách sạn FLC Grand Hạ Long được thiết kế theo hình thức căn hộ với diện tích rộng và trang bị đầy đủ tiện nghi, mang đến cho du khách những giờ phút thư giãn trọn vẹn như chính tại căn nhà của bạn.",
-    hotelPriceTag: "All year: 60$ per night/2P",
+      "Crowne Plaza Phú Quốc Starbay là khu nghỉ dưỡng cao cấp với 308 phòng nghỉ, suite và villa mang phong cách trang nhã ven biển Bãi Dài, Tây Bắc Phú Quốc. Du khách tại đây sẽ được thưởng thức phong vị địa phương cũng như ẩm thực quốc tế tại hai nhà hàng đặc biệt.",
+    hotelPriceTag: "All year: 100$ per night/Family",
     hotelPrice: 4000,
   },
 ];

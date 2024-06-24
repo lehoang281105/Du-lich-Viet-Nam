@@ -310,7 +310,7 @@
   <!-- ========= WEATHER API =========== -->
   <script>
     const apiKey = "949c3e4346bb2f7b14fd38c837b67ae5";
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=halong";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&id=1583992";
     async function checkWeather(){
       const response = await fetch(apiUrl + `&appid=${apiKey}`);
       var data = await response.json();
