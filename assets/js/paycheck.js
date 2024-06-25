@@ -65,11 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
   btns.forEach((item, index) => {
     item.addEventListener("click", () => {
       const userID = Math.floor(Math.random() * 100) + 1;
-      const paidContent = `${payingHotel[index].hotelID}${userID}`;
+      const paidContent =
+        `${payingHotel[index].hotelID}${userID}`.toUpperCase();
       const paidPrice = payingHotel[index].hotelPrice;
       let QR = `https://img.vietqr.io/image/${bankInfo.BANK_ID}-${bankInfo.ACCOUNT_NO}-compact2.png?amount=${paidPrice}&addInfo=${paidContent}`;
       hotelQRImg.src = QR;
-      paid_content.innerHTML = paidContent;
+      paid_content.innerHTML = paidContent.toUpperCase();
       paid_price.innerHTML = paidPrice;
       const intervalId = setInterval(() => {
         checkPaid(paidPrice, paidContent, intervalId);
